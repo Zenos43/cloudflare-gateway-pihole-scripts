@@ -60,7 +60,7 @@ jobs:
           CLOUDFLARE_LIST_ITEM_LIMIT: ${{ secrets.CLOUDFLARE_LIST_ITEM_LIMIT }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
 
-      - name: Send ping request.
+      - name: Send ping request
         if: env.PING_URL != ''
         run: |
           curl "${{ env.PING_URL }}"
